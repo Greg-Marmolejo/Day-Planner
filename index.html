@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Day Planner</title>
+</head>
+
+<body>
+    <!--User can choose date-->
+    <header class="jumbotron">
+        <h1 class ="display-3">Day Planner</h1>
+        <p class ="lead">An easy way to plan your day!</p>
+        <p id="currentDay" class ="lead"></p>
+        <div id="dateOptions">
+            <label for="enable date" id="labelDate">multi-day </label>
+            <input type="checkbox" id="enableDate">
+            <div id="dateGroup">
+                <label for="datepicker">Goto Date:</label>
+                <input type="date" name="datepicker" id="datepicker" class="form-inline"> 
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!--Timeslots.  These will be generated with jQuery-->
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+
+    <h2 id="save-toast" style="display: none;
+    ">Saved!</h2>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
