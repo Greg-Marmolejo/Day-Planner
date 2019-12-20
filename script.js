@@ -191,3 +191,34 @@ function getStoreDatePrefix() {
 }
 
 // Return the moment formatted as a 12-hour AM/PM time string (Example: 10AM)
+function formatAmPm(m) {
+    return m.format("hA");
+}
+
+//////// Get Moment ///////////
+// Create a new moment based off curDate and a 12hr AM/PM format time string
+function getMoment24H(hour24) {
+    return moment(curDate.format("YYYYMMDD ") + hour24, "YYYYMMDD H");
+}
+
+// Document Ready
+$(function() {
+    // Set the date in the header
+    setCurrentDateLabel();
+
+    // Load Multi-day setting from local storage and update the checked state.
+    loadMultiDaySettings();
+
+    // Watch for click of Enable Multi-day support
+    $("enableDate").on("click", multiDayChecked);
+
+    // Initialize the Date Picker and Setup a 'change' event handler
+    $("#datepicker").val(moment().format('YYYY-MM-DD'));
+    $("#datepicker").on("change", datePickerChange);
+
+    // Setup Save Button events through the container element
+    $(".container").on("click," ".saveBtn", handleSave);
+
+    // Load the day into the view Once at the start with a fade-in
+    loadDay(fadeStart);
+});
