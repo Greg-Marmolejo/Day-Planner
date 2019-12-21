@@ -108,7 +108,7 @@ input[type="date"] {
     position: fixed;
     bottom: 0px;
     text-align: center;
-    margin: 0;
+    margin-top: 0;
     width: 100%;
     color: black;
     background-color: white;

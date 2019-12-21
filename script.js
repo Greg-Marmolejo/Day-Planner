@@ -6,8 +6,9 @@ var fadeStart = '';
 var fadeNormal = '';
 
 // Save Toast Fade Times
-var fadeToastIn = "";
-var fadeToastOut = false;
+// var fadeToastIn = "";
+// var fadeToastOut = false;
+toastr.options = { "positionClass": "toast-top-center"};
 
 // Time Block Updates
 var timeBlockDelayMS = 30000;
@@ -66,7 +67,8 @@ function handleSave() {
     var hour = $desc.attr("data-hour");
     var text = $desc.val();
     localStorage.setItem(getStoreDatePrefix() + hour.trim(), text.trim());
-    $("#save-toast").fadeIn(fadeToastIn).fadeOut(fadeToastOut);
+    // $("#save-toast").fadeIn(fadeToastIn).fadeOut(fadeToastOut);
+    toastr["success"]("Saved!");
 }
 
 // Sets the current day in the header
